@@ -43,4 +43,6 @@ helm package .
 
 helm dependency update .
 
+echo ${#CHARTMUSEUM_PASSWORD}
+
 helm push ${CHART_FOLDER}-* ${CHARTMUSEUM_URL} -u ${CHARTMUSEUM_USER} -p ${CHARTMUSEUM_PASSWORD} ${FORCE}
